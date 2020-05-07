@@ -1,0 +1,83 @@
+.split{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: none;
+    grid-template-areas: "one two";
+}
+.col_1{
+    grid-area: one;
+    display: grid;
+    background-color: black;
+    color: gainsboro;
+    text-align: center;
+}
+.col_2{
+    grid-area: two;
+    display: grid;
+}
+.logo{
+    color: white;
+    text-align: center;
+}
+.img-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .item {
+    background-color: gainsboro;
+    text-align: center;
+    font-size: 1.25em;
+  }
+  img:hover{
+      opacity: 25%;
+  }
+.side{
+    font-size: 5em;
+    line-height: 1;
+    letter-spacing: 15px;
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  ul.topnav li {float: left;}
+  
+  ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  ul.topnav li a:hover:not(.active) {
+      background-color: gainsboro; color: black;
+    }
+  
+  ul.topnav li a.active {
+      background-color: seagreen;
+}
+  
+  ul.topnav li.right {float: right;}
+  
+  @media screen and (max-width: 800px) {
+    ul.topnav li.right, 
+    ul.topnav li {
+        float: none;
+    }
+    .col_1{
+        display: none;
+    }
+    .img-container {
+        grid-template-columns: none;
+        margin: auto;
+    }
+    .split{
+        grid-template-columns: none;
+        grid-template-areas: none;
+    }
+  }
